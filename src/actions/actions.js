@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const head = {
   headers: {
-    'X-Auth-Token': 'b4d8ff1cd4f848c7854b8eb2b8c13532'
+    'X-Auth-Token': process.env.REACT_APP_TOKEN
   }
 }
 
