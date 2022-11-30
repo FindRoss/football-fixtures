@@ -14,9 +14,9 @@ const App = () => (
       <div className="container">
         <Pane display="flex">
           <Pane flex={1}>
-            <Heading size={700}>Footy Fixtures</Heading>
+            <Heading size={700}>Football Fixtures</Heading>
             <Text size={300}>
-              Upcoming games from the World's top competitions
+              Upcoming games from the world's top leagues and competitions
             </Text>
           </Pane>
           <Leagues />
