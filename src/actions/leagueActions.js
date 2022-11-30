@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const head = {
   headers: {
-    'X-Auth-Token': 'b4d8ff1cd4f848c7854b8eb2b8c13532'
+    'X-Auth-Token': process.env.REACT_APP_TOKEN
   }
 }
 
@@ -29,7 +29,7 @@ function fetchLeaguesError(error) {
 
 export const fetchLeagues = () => dispatch => {
   dispatch(fetchLeaguesBegin());
-  axios.get(`http://api.football-data.org/v2/competitions?plan=TIER_ONE`, head)
+  axios.get(`https://api.football-data.org/v2/competitions?plan=TIER_ONE`, head)
     .then(res => dispatch(fetchLeaguesSuccess(res.data)))
     .catch(error => dispatch(fetchLeaguesError(error)))
 }
